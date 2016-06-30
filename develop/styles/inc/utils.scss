@@ -1,0 +1,37 @@
+/* Add group class to container to clear floated children */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Stop user from selecting chosen element */
+.no-sel
+{
+  -webkit-user-select: none;      
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Vertically and Horizontally center an element */
+.center-both
+{
+  position: relative;
+  left:50%; top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+/* Media Query be defined up in here
+E.G - .element { @include mq(tablet) { tablet only code goes here } }
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin mq($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 720px) and (max-width:1200px) { @content; }
+  }
+  @else if $breakpoint == mobile {
+    @media (max-width:720px) { @content; }
+  }
+}

@@ -1,2 +1,2 @@
 # Design-Patterns
-Annotated source code for implementations of Design PAtterns 
+Annotated source code for implementations of Design Patterns 
