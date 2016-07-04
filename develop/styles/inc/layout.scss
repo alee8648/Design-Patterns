@@ -1,15 +1,15 @@
 body
 {
-	background: red;
+	background: #ddd;
 
 	@include mq(tablet) { 
-		background: green;
+		background: #bbb;
 		color: white;
 		padding:100px;
 	}
 
 	@include mq(mobile) { 
-		background: blue;
+		background: #aaa;
 		color: orange;
 	}
 }

@@ -1,4 +1,3 @@
-
 // An example of the module design pattern, by enclosing all the application's major logic inside a module this reduces the amount of variables on the global scope which helps to avoid collision with other functions and objects with equivalent names. 
 
 // By enclosing the code inside a closure, we are able to choose which methods should be publicly accessible and which are private and are only used internally. 
@@ -33,6 +32,3 @@ var module = new Module();
 // Methods of the module can now be called
 module.init();
 
-
-
-//alert('utils.js has been added amended whilst live as a five-alive-fruit and then and fired')

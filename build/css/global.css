@@ -488,15 +488,15 @@ E.G - .element { @include mq(tablet) { tablet only code goes here } }
     margin-left: 52%; } }
 
 body {
-  background: red; }
+  background: #ddd; }
   @media (min-width: 720px) and (max-width: 1200px) {
     body {
-      background: green;
+      background: #bbb;
       color: white;
       padding: 100px; } }
   @media (max-width: 720px) {
     body {
-      background: blue;
+      background: #aaa;
       color: orange; } }
 
 /* Typography
