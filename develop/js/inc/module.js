@@ -10,7 +10,7 @@ var Module = (function ($, window) {
 
 		// Public methods are created as properties of the parent object using the 'this' keyword and dot notation.
 		this.init = function() {
-			console.log('SampleModule initialised');
+			console.log('Module initialised');
 		}; 
 
 		// Private methods are declared in function declarations using the 'var' keyword and may only be used within this scope.
