@@ -24,7 +24,7 @@ var Module = (function ($, window) {
 	// Return the function created within the closure to be saved to the global variable 'SampleModule'
 	return Module;
 
-}(jQuery, window))
+}(jQuery, window));
 
 // The module is now available to be used as a constructor function to create an instance of the module and save it to a variable.
 var module = new Module();

@@ -29,7 +29,7 @@ var RevealingModule = (function ($, window) {
 // When declaring functions directly in the 'return' object, there is a scoping issue caused by public methods calling other public methods. The new scope they are called in does not have access to the other public method. This is resolved by calling the function with the 'RevealingModule.' prepended, or by returning the functions as I have done above.
 
 
-}(jQuery, window))
+}(jQuery, window));
 
 RevealingModule.init();
 RevealingModule.publicMethod2();
