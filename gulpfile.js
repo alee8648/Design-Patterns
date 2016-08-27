@@ -82,7 +82,7 @@ gulp.task('scripts:release', function() {
 gulp.task('scripts:plugins', function() {
     return gulp.src([
                     'bower_components/jquery/dist/jquery.min.js',
-                    'bower_components/modernizr/src/Modernizr.js'
+                    //'bower_components/modernizr/src/Modernizr.js'
                     ])
         .pipe(uglify())
         .pipe(concat('plugins.min.js'))

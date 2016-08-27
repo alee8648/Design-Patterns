@@ -1,0 +1,17 @@
+.main-body {
+	button {
+		border: solid 1px #fff;
+	}
+
+	form {
+		margin-bottom: 20px;
+	}
+
+	input {
+		color: #333;
+
+		&[disabled] {
+			background-color: grey;
+		}
+	}
+}

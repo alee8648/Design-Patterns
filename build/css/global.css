@@ -682,3 +682,13 @@ label > .label-body {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.main-body button {
+  border: solid 1px #fff; }
+
+.main-body form {
+  margin-bottom: 20px; }
+
+.main-body input {
+  color: #333; }
+  .main-body input[disabled] {
+    background-color: grey; }
