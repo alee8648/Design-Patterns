@@ -49,6 +49,7 @@ Subject.prototype.removeObserver = function(observer) {
 
 Subject.prototype.notify = function(context) {
 	var observerCount = this.observers.count();
+	console.log("observers", this.observers);
 	for ( var i = 0; i < observerCount; i++) {
 		this.observers.get(i).update(context);
 	}
@@ -70,9 +71,9 @@ function extend(obj, extension) {
 
 // References to our DOM elements
 
-var controlCheckbox = document.getElementById("mainCheckbox"),
-	addBtn = document.getElementById("addNewObserver"),
-	container = document.getElementById("observersContainer");
+var controlCheckbox = $("#mainCheckbox").get(0),
+	addBtn = $("#addNewObserver"),
+	container = $("#observersContainer")[0];
 
 // Concrete Subject
 
@@ -84,27 +85,30 @@ controlCheckbox.onclick = function(){
 	controlCheckbox.notify(controlCheckbox.checked);
 };
 
-addBtn.onclick = addNewObserver;
+$(addBtn).on('click', addNewObserver);
 
 // Concrete Observer
 
-function addNewObserver() {
+function addNewObserver() { 
 
 	// Create a newcheckbox to be added
 	var check = document.createElement("input");
 	check.type = "checkbox";
+	console.log(check);
+	//check.type = "checkbox";
 
 	// Extend the checkbox with the Observer class
 	extend(check, new Observer());
-
+	console.log( check);
 	// Override with custom update behaviour
 	check.update = function(value){
 		this.checked = value;
 	}
 
-	// Add the new observer to our lits of observers for our main subject
+	// Add the new observer to our list of observers for our main subject
 	controlCheckbox.addObserver(check);
 
 	// Append the item to the container
 	container.appendChild(check);
+
 }
